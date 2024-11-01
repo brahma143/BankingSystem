@@ -1,0 +1,56 @@
+
+ body {
+  background-image: url('images\bank.jpeg');
+  background-size: cover; /* Ensure the image covers the entire background */
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+}
+
+
+/*  @charset "ISO-8859-1";
+
+form{
+	display: felx;
+}
+
+nav {
+    background-color: #333;
+    overflow: hidden;
+}
+
+nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    color:black;
+}
+
+nav ul li {
+    float: left;
+}
+
+nav ul li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    
+}
+
+nav ul li a:hover {
+    background-color: white;
+}
+
+button {
+    background-color: #0056b3;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #003f7f;
+}
+  */
