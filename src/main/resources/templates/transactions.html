@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="ISO-8859-1">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User Transactions</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body>
+    <div class="container mt-5">
+        <h1 class="text-center mb-4">User Transactions</h1>
+        <div class="table-responsive">
+            <table class="table table-bordered table-hover">
+                <thead class="thead-dark">
+                    <tr>
+                        <th>ID</th>
+                        <th>Amount</th>
+                        <th>Transaction Date</th>
+                        <th>Type</th>
+                        <th>Account ID</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <!-- Thymeleaf loop to display transactions -->
+                    <tr th:each="t : ${transactions}">
+                        <td th:text="${t.id}"></td>
+                        <td th:text="${t.amount}"></td>
+                        <td th:text="${t.transactionDate}"></td>
+                        <td th:text="${t.type}">Deposit</td>
+                        <td th:text="${t.account.id}"></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        <p class="text-center mt-4">
+            Back to Home page 
+            <a th:href="@{/dash}" class="text-decoration-none text-primary">Home page</a>
+        </p>
+    </div>
+
+    <!-- Bootstrap JS and dependencies -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.0.6/dist/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>

@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Deposit</title>
+</head>
+<body>
+    <h2>Deposit Funds</h2>
+
+    <form th:action="@{/deposit/{accountNumber}(accountNumber=${accountNumber})}" method="post">
+        <label>Account Number:</label>
+        <span th:text="${accountNumber}"></span><br><br>
+
+        <label>Amount:</label>
+        <input type="text" name="amount" placeholder="Enter amount"><br><br>
+
+        <button type="submit">Deposit</button>
+
+        <p th:if="${error}" th:text="${error}"></p>  <!-- Display error message if exists -->
+    </form>
+
+    <p><a th:href="@{/accounts}">Back to Accounts</a></p>
+</body>
+</html>
